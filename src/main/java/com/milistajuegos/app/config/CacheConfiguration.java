@@ -43,6 +43,7 @@ public class CacheConfiguration {
             createCache(cm, com.milistajuegos.app.domain.User.class.getName());
             createCache(cm, com.milistajuegos.app.domain.Authority.class.getName());
             createCache(cm, com.milistajuegos.app.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.milistajuegos.app.domain.Juego.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

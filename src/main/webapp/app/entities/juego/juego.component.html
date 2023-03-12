@@ -1,0 +1,66 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="stefanApp.juego.home.title">Juegos</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-juego" [routerLink]="['/juego/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="stefanApp.juego.home.createLabel">
+            Create new Juego
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="juegos">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="stefanApp.juego.nombre">Nombre</span></th>
+            <th><span jhiTranslate="stefanApp.juego.descripcion">Descripcion</span></th>
+            <th><span jhiTranslate="stefanApp.juego.observaciones">Observaciones</span></th>
+            <th><span jhiTranslate="stefanApp.juego.plataforma">Plataforma</span></th>
+            <th><span jhiTranslate="stefanApp.juego.fechaFin">Fecha Fin</span></th>
+            <th><span jhiTranslate="stefanApp.juego.fechaInicio">Fecha Inicio</span></th>
+            <th><span jhiTranslate="stefanApp.juego.estado">Estado</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let juego of juegos ;trackBy: trackId">
+                <td><a [routerLink]="['/juego', juego.id, 'view' ]">{{juego.id}}</a></td>
+                <td>{{juego.nombre}}</td>
+                <td>{{juego.descripcion}}</td>
+                <td>{{juego.observaciones}}</td>
+                <td>{{juego.plataforma}}</td>
+                <td>{{juego.fechaFin | date:'mediumDate'}}</td>
+                <td>{{juego.fechaInicio | date:'mediumDate'}}</td>
+                <td>{{juego.estado}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/juego', juego.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/juego', juego.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'juego', { outlets: { popup: juego.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

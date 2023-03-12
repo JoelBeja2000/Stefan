@@ -1,0 +1,43 @@
+{
+    "name": "Juego",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "observaciones",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "plataforma",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fechaFin",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "fechaInicio",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "estado",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20230312022648",
+    "entityTableName": "juego",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

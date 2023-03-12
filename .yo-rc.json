@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.milistajuegos.app",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.0.0",
+    "applicationType": "monolith",
+    "baseName": "Stefan",
+    "packageName": "com.milistajuegos.app",
+    "packageFolder": "com/milistajuegos/app",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NWNiY2NiYWNmYjEwODRiMDU3ZmNmYjI3YzRjMjJjNDM3MzZiOWZkODc0YTU2ZDE1MjE0OGI2NjljMWZhNzM1YjQ3MDQ2YWU0NDcyNjM2NmE3YTg0NGMyNjllOTg3NzM4Yjk0OTJmYzNmYTlkMDZkYzc0YzllYzU1ZTU5MmM3MTg=",
+    "clientFramework": "angularX",
+    "clientTheme": "materia",
+    "clientThemeVariant": "primary",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": ["en"]
+  }
+}
